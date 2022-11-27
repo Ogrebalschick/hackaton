@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front End</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+    <div class="tab">
+      <!-- <button id="getTasks">Get Tasks</button> -->
+      <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Tasks</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Create task</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Delete task</button>
+    </div>
+    <div class="tabs__open">
+    <div id="London" class="tabcontent">
+      <div id="tasks__div">
+
+      </div>
+    </div>
+    
+    <div id="Paris" class="tabcontent">
+      <form id="create-task">
+        <label>Usernames:</label><br />
+        <input
+          type="text"
+          id="usernames"
+          name="usernames"
+          placeholder="John"
+        /><br />
+  
+        <label>Tags:</label><br />
+        <input type="text" id="tags" name="tags" placeholder="IT" /><br /><br />
+  
+        <label>Done:</label><br />
+        <input
+          type="text"
+          id="done"
+          name="done"
+          placeholder="false"
+        /><br /><br />
+  
+        <label>Deadline:</label><br />
+        <input
+          type="text"
+          id="deadline"
+          name="deadline"
+          placeholder="30.11.22"
+        /><br /><br />
+  
+        <label>Author:</label><br />
+        <input
+          type="text"
+          id="author"
+          name="author"
+          placeholder="John"
+        /><br /><br />
+  
+        <button type="submit" value="Submit">Create Task</button>
+      </form>
+    </div>
+    
+    <div id="Tokyo" class="tabcontent">
+     <form id="delete-task">
+      <label>Id:</label><br />
+      <input type="text" id="id" name="id" placeholder="John" /><br />
+
+      <button type="submit" value="Submit">Delete Task</button>
+    </form>
+    </div>
+  </div>
+
+
+
+<script>
+   function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</div>
+    <script type="module" src="./index.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+ 
+  </body>
+</html>
