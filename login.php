@@ -3,21 +3,21 @@ $title="Форма авторизации";
 require __DIR__ . '/header.php';
 require "db.php";
 
-$data = $_POST;
+$data = $_POST;  //переменная для сбора данных от пользователя по методу POST
 
-if(isset($data['do_login'])) { 
+if(isset($data['do_login'])) {  // после нажатия на кнопку...
 
- $errors = array();
+ $errors = array(); // массив для сбора ошибок
 
- $user = R::findOne('users', 'login = ?', array($data['login']));
+ $user = R::findOne('users', 'login = ?', array($data['login']));  // Проводим поиск пользователей в таблице users
 
  if($user) {
 
- 	if(password_verify($data['password'], $user->password)) {
+ 	if(password_verify($data['password'], $user->password)) { // Если логин существует, тогда проверяем пароль
 
- 		$_SESSION['logged_user'] = $user;
+ 		$_SESSION['logged_user'] = $user; // Все верно, пускаем пользователя
  		
-                header('Location: index.php');
+                header('Location: index.php'); // кидает на главную
 
  	} else {
     
