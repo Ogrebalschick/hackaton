@@ -125,7 +125,7 @@ body {font-family: "Lato", sans-serif;}
 }
 .hello{
   margin-bottom: 30px;
-  display: flex;
+  
   justify-content: center;
 }
 .hello a:last-child{
@@ -157,5 +157,169 @@ border-radius: 5px;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+.hello__page{
+  margin-top: 220px;
+}
+.register{
+  margin-top: 100px;
+}
+.login{
+  text-align: center;
+  margin-top: 160px;
+}
+#delete-task input,
+#create-task input,
+.register input,
+.login input{
+  padding: 5px;
+    border: none;
+    border-bottom: 1px solid #262D2C;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #262D2C;
+    outline: none;
+    margin-bottom: 15px;
+}
+#delete-task input::placeholder,
+#create-task input::placeholder,
+.register input::placeholder,
+.login input::placeholder{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #262D2C;
+  
+}
+.register p,
+.login p{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262D2C;
+  margin: 5px;
+}
+.login__btn{
+
+}
+#delete-task button{
+  background: #C7493A!important;
+}
+#delete-task button,
+.create__btn,
+.reg__btn,
+.login__btn{
+  font-weight: 700;
+font-size: 19px;
+line-height: 19px;
+color: #FFFFFF;
+background: #689775;
+box-shadow: 2px 2px 8px rgba(53, 65, 63, 0.16);
+border-radius: 5px;
+padding: 7px 16px;
+text-decoration: none;
+width: 200px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+.create__btn:hover,
+.reg__btn:hover,
+.login__btn:hover{
+  background: #84B090;
+box-shadow: 4px 4px 14px rgba(53, 65, 63, 0.12);
+border-radius: 5px;
+}
+.create__btn:active,
+.reg__btn:active,
+.login__btn:active{
+  background: #4D7759;
+border-radius: 5px;
+}
+.register{
+text-align: center;
+}
+.register input{
+  width: 210px;
+}
+.hello h1{
+  text-align: center;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 230px;  
+}
+.hello__page_buttons{
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+#delete-task,
+#create-task {
+display: inline-grid;
+}
+.exit__btn{
+  position: relative;
+  top: 13px;
+  margin-left: 0!important;
+  background: #d15547!important;
+  opacity: 1;
+}
+.exit__btn:hover{
+  background: #C7493A!important;
+box-shadow: 4px 4px 14px rgba(53, 65, 63, 0.12);
+}
+.exit__btn{
+  opacity: 0.7;
+}
+.hello__hover:hover .exit__btn{
+  opacity: 1;
+}
+
+#delete-task button{
+  background: #d45e51!important;
+}
+#delete-task button:hover{
+  background: #C7493A!important;
+box-shadow: 4px 4px 14px rgba(53, 65, 63, 0.12);
+}
+
+
+
+
+
+
+
+
+
+
+
+#calendar2 {
+  width: 100%;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+}
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar2 tbody td {
+  color: rgb(44, 86, 122);
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: rgb(231, 140, 92);
+}
+#calendar2 tbody td.today {
+  background: rgb(220, 0, 0);
+  color: #fff;
 }

@@ -13,6 +13,9 @@ const button = document.getElementById("getTasks");
       const tags = document.createElement("p");
       tags.innerText = "tags: " + task.tags;
 
+      const description = document.createElement("p");
+      description.innerText = "description: " + task.description;
+
       const done = document.createElement("p");
       done.innerText = "done: " + task.done;
 
@@ -26,6 +29,7 @@ const button = document.getElementById("getTasks");
       div.appendChild(usernames);
       div.appendChild(done);
       div.appendChild(tags);
+      div.appendChild(description);
       div.appendChild(deadline);
       div.appendChild(author);
       document.getElementById("tasks__div").appendChild(div);
